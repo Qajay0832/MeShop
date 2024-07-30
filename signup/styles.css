@@ -6,7 +6,10 @@
     font-weight: 400;
     font-style: normal;
 }
-
+.heading{
+    font-size: 3rem;
+    font-weight: 600;
+}
 .nav {
     background-color: black;
     color: white;
@@ -28,35 +31,26 @@
     color: blue;
     cursor: pointer;
 }
-
-.shopDesc {
-    padding-left: 2rem;
+.formInput{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
-
-.heading {
-    font-weight: 600;
-    font-size: 3rem;
-}
-
-.desc {
-    font-weight: 500;
-}
-
-.btn {
-    padding: 1rem 3rem;
-    font-size: 1rem;
+.input{
+    padding: 0.5rem 1rem;
     border: 1px solid black;
+    font-size: 1rem;
+}
+.btn{
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
     background-color: white;
+    border: 1px solid black;
+    width: max-content;
 }
-
-.btn:hover {
-    color: white;
+.btn:hover{
     background-color: black;
+    color: white;
     cursor: pointer;
-}
-
-body {
-    background-image: url("./assets/indexImg.jpg");
-    background-position:right top;
-    background-repeat: no-repeat;
 }

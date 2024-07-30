@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Cart</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="navItem">
+      <p>MeShop.</p>
+      <div class="navLinks">
+        <p class="navButton" id="navHome">Home</p>
+        <p class="navButton" id="navLogin">Login</p>
+        <p class="navButton" id="navSignUp">SignUp</p>
+        <p class="navButton" id="navShop">Shop</p>
+        <p class="navButton" id="navCart">My Cart</p>
+        <p class="navButton" id="navProfile">Profile</p>
+      </div>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="cartItems">
+      <div id="cartItems" class="items"></div>
+    </div>
+
+    <div class="checkoutList" id="checkoutList">
+      <p class="checkoutHeading">Checkout List</p>
+      <div id="priceList" class="priceList">
+      </div>
+      <hr style="background-color: white;" />
+      <div class="priceListItem" style="padding: 0 2rem;">
+        <div> Total</div>
+        <div id="total">$500</div>
+      </div>
+
+      <hr style="background-color: white; margin-bottom: 1rem;" />
+      <button id="checkoutBtn">Click to Checkout</button>
+
+
+
+    </div>
+  </div>
+  <div class="emptyCart" id="emptyCart">
+    <p class="emptyText">Add Something to Cart !</p>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+
 </html>

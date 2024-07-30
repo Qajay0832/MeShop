@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -33,30 +40,30 @@ datalist {
   width: 100%;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav {
+  background-color: black;
   color: white;
+  padding: 1rem 2rem;
   position: sticky;
   z-index: 100;
   top: 0;
-
-  background-color: black;
-  border-bottom: 1px solid white;
-  padding: 1rem;
-  font-size: 1rem;
 }
 
-nav .brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+.navItem {
+  display: flex;
+  justify-content: space-between;
 }
 
-nav .nav-items a {
-  margin: 0 1rem;
+.navLinks {
+  color: grey;
+  display: flex;
+  gap: 1rem;
 }
 
+.navButton:hover {
+  color: blue;
+  cursor: pointer;
+}
 main {
   display: flex;
   height: 100vh;
@@ -76,6 +83,13 @@ main main-content {
   display: block;
   width: 100%;
   margin-left: 11rem;
+}
+
+.sidebar {
+  overflow-y: scroll;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 aside section {
@@ -153,6 +167,9 @@ main-content .items {
 main-content .items .item {
   border: 1px solid black;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main-content .items .item img {
@@ -190,3 +207,13 @@ main-content .items .item .circle {
   border-radius: 100%;
   margin: 0 5px;
 }
+.itemTitle{
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+/* .itemImage{
+  height:10rem;
+  width:max-content;
+  align-items: center;
+} */

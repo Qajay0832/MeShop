@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Cart</title>
-    <link rel="stylesheet" href='./styles.css'>
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <nav class="nav">
@@ -20,14 +20,14 @@
             </div>
         </div>
     </nav>
-    <div class="shopDesc">
-        <p class="heading">MeShop.</p>
-        <p class="desc">Your First Shop built on HTML,CSS AND JavaScript</p>
-        <div>
-            <button class="btn" id="login">Login</button>
-            <button class="btn" id="signUp">Signup</button>
-        </div>
-    </div>
+    <p class="heading">Login</p>
+    <form class="formInput">
+        <input class="input" type="email" placeholder="email" id="email"/>
+        <input class="input" type="password" placeholder="password" id="password"/>
+        <input class="btn" type="button" value="Login" id="login"/>
+    </form>
+    <p id="error"></p>
+    <p id="success"></p>
     <script src="./script.js"></script>
 </body>
 </html>

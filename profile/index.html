@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Profile</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
+<html lang="en">
 
-    <script src="" async defer></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="navItem">
+            <p>MeShop.</p>
+            <div class="navLinks">
+                <p class="navButton" id="navHome">Home</p>
+                <p class="navButton" id="navLogin">Login</p>
+                <p class="navButton" id="navSignUp">SignUp</p>
+                <p class="navButton" id="navShop">Shop</p>
+                <p class="navButton" id="navCart">My Cart</p>
+                <p class="navButton" id="navProfile">Profile</p>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="myProfile">
+            <form>
+                <p class="heading">My Profile</p>
+                <div class="formInput">
+                    <input class="input" type="text" id="fname" placeholder="First Name" id="fname"/>
+                    <input class="input" type="text" id="lname" placeholder="Last Name" id="lname"/>
+                </div>
+                <button class="btn" type="button"  id="saveInfo">Save Info</button>
+            </form>
+            <p id="errorName"></p>
+            <p id="successName"></p>
+        </div>
+        <div class="editPass">
+            <form>
+                <p class="heading">Edit Password</p>
+                <div class="formInput">
+                    <input class="input" type="password" id="old" placeholder="old password"/>
+                    <input class="input" type="password" id="new" placeholder="new password"/>
+                    <input class="input" type="password" id="confirm" placeholder="confirm password"/>
+                </div>
+                <button class="btn" type="submit"  id="change">Change Password</button>
+            </form>
+            <p id="errorPassword"></p>
+            <p id="successPassword"></p>
+        </div>
+        <button class="btn" id="logout">Logout</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
 </html>
