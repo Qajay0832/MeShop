@@ -16,22 +16,22 @@ error.style.color = 'red';
 success.style.color = 'green';
 
 navLogin.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/login/'
+    window.location.href='https://qajay0832.github.io/MeShop/login/'
 })
 navSignUp.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/signup/'
+    window.location.href='https://qajay0832.github.io/MeShop/signup/'
 })
 navHome.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501'
+    window.location.href='https://qajay0832.github.io/MeShop'
 })
 navShop.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/shop'
+    window.location.href='https://qajay0832.github.io/MeShop/shop'
 })
 navProfile.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/profile'
+    window.location.href='https://qajay0832.github.io/MeShop/profile'
 })
 navCart.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/cart'
+    window.location.href='https://qajay0832.github.io/MeShop/cart'
 })
 
 signup.addEventListener('click', (e) => {
@@ -63,7 +63,7 @@ signup.addEventListener('click', (e) => {
                 })
                 localStorage.setItem('users', JSON.stringify(users))
                 setTimeout(()=>{
-                    window.location.href = "http://127.0.0.1:5501/login";
+                    window.location.href = "https://qajay0832.github.io/MeShop/login";
                 },2000)
             }
         }

@@ -19,22 +19,22 @@ let navProfile=document.getElementById('navProfile');
 
 
 navLogin.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/login/'
+    window.location.href='https://qajay0832.github.io/MeShop/login/'
 })
 navSignUp.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/signup/'
+    window.location.href='https://qajay0832.github.io/MeShop/signup/'
 })
 navHome.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501'
+    window.location.href='https://qajay0832.github.io/MeShop'
 })
 navShop.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/shop'
+    window.location.href='https://qajay0832.github.io/MeShop/shop'
 })
 navProfile.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/profile'
+    window.location.href='https://qajay0832.github.io/MeShop/profile'
 })
 navCart.addEventListener('click',()=>{
-    window.location.href='http://127.0.0.1:5501/cart'
+    window.location.href='https://qajay0832.github.io/MeShop/cart'
 })
 
 errorName.style.color = 'red';
@@ -45,9 +45,11 @@ successPassword.style.color = 'green';
 let users = JSON.parse(localStorage.getItem('users') ?? '[]');
 let currentUser = JSON.parse(localStorage.getItem('currentUser') ?? '[]');
 let index;
+console.log(currentUser);
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(currentUser);
     if (currentUser.length == 0) {
-        window.location.href = 'http://127.0.0.1:5501/login/'
+        window.location.href = 'https://qajay0832.github.io/MeShop/login/'
     }
 })
 for (let i = 0; i < users.length; i++) {
@@ -113,5 +115,5 @@ change.addEventListener('click', (e) => {
 logout.addEventListener('click',()=>{
     currentUser=[];
     localStorage.setItem('currentUser',JSON.stringify(currentUser));
-    window.location.href='http://127.0.0.1:5501/login/'
+    window.location.href='https://qajay0832.github.io/MeShop/login/'
 })
