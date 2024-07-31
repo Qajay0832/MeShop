@@ -65,6 +65,7 @@ function AddtoCart(cart) {
     Pay();
     cart = cart || JSON.parse(localStorage.getItem('cart'));
     cartItems.innerHTML = '';
+    priceList.innerHTML="";
     if (cart.length > 0) {
         cartItems.style.display = 'flex';
         checkoutList.style.display = 'block';
