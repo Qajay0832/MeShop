@@ -23,6 +23,11 @@ let blue = document.getElementById('blue');
 let green = document.getElementById('green');
 let white = document.getElementById('white');
 let black = document.getElementById('black');
+// let xs = document.getElementById('xs');
+let s = document.getElementById('s');
+let m = document.getElementById('med');
+let l = document.getElementById('l');
+let xl = document.getElementById('xl');
 
 
 
@@ -48,10 +53,11 @@ navShop.addEventListener('click', () => {
 navProfile.addEventListener('click', () => {
     window.location.href = 'https://qajay0832.github.io/MeShop/profile'
 })
-navCart.addEventListener('click',()=>{
-    window.location.href='https://qajay0832.github.io/MeShop/cart'
+navCart.addEventListener('click', () => {
+    window.location.href = 'https://qajay0832.github.io/MeShop/cart'
 })
 
+let sizeArray = [];
 let colorArray = [];
 let products;
 let colors = ['blue', 'black', 'white', 'green', 'red'];
@@ -61,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (products) {
         AppendItems(products);
         Searching(products);
-        Colors(products)
+        Colors(products);
+        Sizes(products);
     }
     else {
         fetch('https://fakestoreapi.com/products').then(res => {
@@ -289,6 +296,47 @@ function CheckColor(products, color, colorArray) {
         AppendItems(products)
     }
 }
+function CheckSizes(products, color, sizeArray) {
+    Toggle();
+    if (sizeArray.length > 0) {
+        let mens = Filter(products)[0];
+        let womens = Filter(products)[1];
+        let jewelery = Filter(products)[2];
+        let electronics = Filter(products)[3];
+        mens.forEach(item => {
+            let isSubsetOfMen = sizeArray.every((element) => item.sizes.includes(element));
+            if (isSubsetOfMen) {
+                menSection.style.display = 'block';
+                men.innerHTML += card(item);
+            }
+        });
+        womens.forEach(item => {
+            let isSubsetOfWomen = sizeArray.every((element) => item.sizes.includes(element));
+            if (isSubsetOfWomen) {
+                womenSection.style.display = 'block';
+                women.innerHTML += card(item);
+            }
+        });
+        jewelery.forEach(item => {
+            let isSubsetOfJewellery = sizeArray.every((element) => item.sizes.includes(element));
+            if (isSubsetOfJewellery) {
+                jewellerySection.style.display = 'block';
+                jewellery.innerHTML += card(item);
+            }
+        });
+        electronics.forEach(item => {
+            let isSubsetOfElectronics = sizeArray.every((element) => item.sizes.includes(element));
+
+            if (isSubsetOfElectronics) {
+                electronicsSection.style.display = 'block';
+                electronic.innerHTML += card(item);
+            }
+        });
+    }
+    else {
+        AppendItems(products)
+    }
+}
 
 function Colors(products) {
     red.addEventListener('click', () => {
@@ -339,9 +387,56 @@ function Colors(products) {
 }
 
 function AddtoCart(id) {
-        console.log(id);
-        let cart=JSON.parse(localStorage.getItem('cart')??'[]');
-        cart.push(id);
-        localStorage.setItem('cart',JSON.stringify(cart));
+    console.log(id);
+    let cart = JSON.parse(localStorage.getItem('cart') ?? '[]');
+    cart.push(id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+function Sizes(products) {
+    s.addEventListener('click', () => {
+        if (s.checked) {
+            sizeArray.push('S')
+        }
+        else {
+            sizeArray = sizeArray.filter((element) => element !== 'S');
+        }
+        CheckSizes(products, 'S', sizeArray);
+    })
+    // xs.addEventListener('click', () => {
+    //     if (xs.checked) {
+    //         sizeArray.push('XS')
+    //     }
+    //     else {
+    //         sizeArray = sizeArray.filter((element) => element !== 'XS');
+    //     }
+    //     CheckSizes(products, 'XS', sizeArray);
+    // })
+    m.addEventListener('click', () => {
+        if (m.checked) {
+            sizeArray.push('M')
+        }
+        else {
+            sizeArray = sizeArray.filter((element) => element !== 'M');
+        }
+        CheckSizes(products, 'M', sizeArray);
+    })
+    l.addEventListener('click', () => {
+        if (l.checked) {
+            sizeArray.push('L')
+        }
+        else {
+            sizeArray = sizeArray.filter((element) => element !== 'L');
+        }
+        CheckSizes(products, 'L', sizeArray);
+    })
+    xl.addEventListener('click', () => {
+        if (xl.checked) {
+            sizeArray.push('XL')
+        }
+        else {
+            sizeArray = sizeArray.filter((element) => element !== 'XL');
+        }
+        CheckSizes(products, 'XL', sizeArray);
+    })
 }
 

@@ -95,7 +95,6 @@ change.addEventListener('click', (e) => {
                 errorPassword.style.display = 'none';
                 successPassword.style.display = 'block';
                 successPassword.innerHTML = 'Password Changed Successfully';
-
             }
             else {
                 errorPassword.style.display = 'block';
